@@ -1,4 +1,3 @@
-const path = require('path')
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { merge } from 'webpack-merge'
 import { baseWebpackConfig } from './webpack.config.base'
@@ -16,7 +15,6 @@ export const webpackConfig = merge(baseWebpackConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(__dirname, '../public/index.html')
     }),
   ]
 } as any)
